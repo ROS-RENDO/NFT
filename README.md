@@ -34,8 +34,16 @@ npx hardhat node
 ```
 *(⚠️ Keep this terminal running! It provides the local test network and 20 test accounts loaded with 10,000 fake ETH.)*
 
-### 3. Start the Web App (Frontend)
-Open a **second** terminal window, navigate to the `frontend` folder, and start the development server:
+### 3. Deploy the Smart Contract
+Open a **second** terminal window, navigate to the `blockchain` folder, and deploy your contract to the local network:
+```bash
+cd blockchain
+npx hardhat run scripts/deploy.js --network localhost
+```
+*(This will deploy the contract and give you an address like `0x5FbDB...`)*
+
+### 4. Start the Web App (Frontend)
+Open a **third** terminal window, navigate to the `frontend` folder, and start the development server:
 ```bash
 cd frontend
 npm install
